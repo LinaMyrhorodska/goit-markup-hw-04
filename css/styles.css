@@ -11,6 +11,7 @@
     --header-logo-clr:#000000;
     --footer-mail-tel-clr: rgba(255, 255, 255, 0.6);
     --grey-txt-clr: #757575;
+    --icon-clr: #AFB1B8;
 
 
     /* Background colors */
@@ -20,6 +21,7 @@
     --bg-middle-clr: #E5E5E5;
     --portfolio-border-clr: #EEEEEE;
     --portfolio-header-border-clr: #ECECEC;
+    --bg-footer-icons: rgba(255, 255, 255, 0.1);
 
     /* others */
     --items: 9;
@@ -190,6 +192,15 @@ img {
     color: var(--accent-txt-clr);
 }
 
+.header-icon {
+    display: flex;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    fill:currentColor;
+    margin-right: 10px;
+}
+
 .header-mail,
 .header-tel {
     font-weight: 500;
@@ -218,7 +229,17 @@ img {
 /* section main idea */
 
 .idea {
-    background-color: var(--bg-dark-clr);
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-image: linear-gradient(to right,
+     rgba(47, 48, 58, 0.4),
+     rgba(47, 48, 58, 0.4)), 
+    url(../images/idea-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     padding-top: 200px;
     padding-bottom: 200px;
 }
@@ -264,6 +285,19 @@ img {
 .adv-list {
     display:flex;
     align-items: center;
+}
+
+.adv-icon {
+    display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 270px;
+        height: 120px;
+        border-radius: 4px;
+        background-color: var(--bg-btn-clr);
+
+        padding: 25px 100px 25px 100px;
+        margin-bottom: 30px;
 }
 
 .adv-list-item:not(:last-child) {
@@ -319,6 +353,7 @@ img {
     padding-bottom: 95px;
 }
 
+
 .team-h {
     font-weight: 700;
     font-size: 36px;
@@ -334,9 +369,10 @@ img {
 
 .team-list-item {
     background: #FFFFFF;
-        /* material shadow v1 */
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-        border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+
+    padding-bottom: 30px;
 
 }
 
@@ -361,8 +397,81 @@ img {
     text-align: center;
     color: var(--grey-txt-clr);
 
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
+
+.team-sm-list {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.team-sm-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.team-sm-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: var(--icon-clr);
+    background-color: var(--bg-wh-clr);
+}
+
+.team-sm-link:hover,
+.team-sm-link:focus {
+    fill: var(--white-txt-clr);
+    background-color: var(--accent-txt-clr);
+}
+
+/* Секція Clients */
+.clients {
+    padding-top: 95px;
+    padding-bottom: 95px;
+}
+
+.clients-h {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+
+    color: var(--black-txt-clr);
+}
+
+.clients-list {
+    display: flex;
+    justify-content: center;
+}
+
+.clients-item-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--icon-clr);
+    border-radius: 4px;
+    fill: var(--icon-clr);
+    background-color: var(--bg-wh-clr);
+}
+
+.clients-item-link:hover,
+.clients-item-link:focus {
+    border: 1px solid var(--accent-txt-clr);
+    fill: var(--accent-txt-clr);
+    background-color: var(--bg-wh-clr);
+}
+
+.clients-list-item:not(:last-child) {
+    margin-right: 30px;
+}
+
 /* page studio end */
 
 /* page portfolio start */
@@ -392,6 +501,11 @@ img {
     display: flex;
     flex-wrap: wrap;
     margin: calc(-1 * (var(--indent)) / 2);
+}
+
+.portfolio-list-item:hover,
+.portfolio-list-item:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .portfolio-list-item {
@@ -425,10 +539,22 @@ img {
     background-color: var(--bg-dark-clr);
     padding-top: 60px;
     padding-bottom: 60px;
+    display: flex;
+    align-items: baseline;
+}
+
+.general-container {
+    display: flex;
+    align-items: baseline; 
+}
+
+.footer-logo {
+    min-width: 231px;
 }
 
 .footer-list {
     font-style: normal;
+    margin-right: 70px;
 }
 
 .footer-list-item:not(:last-child) {
@@ -468,6 +594,51 @@ img {
     font-size: 14px;
     line-height: 1.71;
     color: var(--footer-mail-tel-clr);
+}
+
+.join-us-h {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--white-txt-clr);
+
+    margin-bottom: 20px;
+
+}
+
+.join-us {
+    display: block;
+    margin-left: 70px;
+    
+}
+
+
+.join-us-list {
+    display: flex;
+    justify-content: baseline;
+}
+
+.join-us-item:not(:last-child) {
+    margin-right: 10px;
+}
+
+.join-us-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    fill: var(--bg-wh-clr);
+    background-color: var(--bg-footer-icons);
+}
+
+.join-us-link:hover,
+.join-us-link:focus {
+    fill: var(--bg-wh-clr);
+    background-color: var(--accent-txt-clr);
 }
 
 /* page portfolio end */

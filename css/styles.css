@@ -292,14 +292,14 @@ img {
     margin-right: auto;
 }
 
-/* section our advantages */
+/* section our pros */
 
-.adv-list {
+.pros-list {
     display:flex;
     align-items: center;
 }
 
-.adv-icon {
+.pros-icon {
     display: flex;
         align-items: center;
         justify-content: center;
@@ -312,11 +312,11 @@ img {
         margin-bottom: 30px;
 }
 
-.adv-list-item:not(:last-child) {
+.pros-list-item:not(:last-child) {
     margin-right: 30px;
 }
 
-.adv-list-item-h {
+.pros-list-item-h {
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
@@ -329,7 +329,7 @@ img {
     margin-bottom: 10px;
 }
 
-.adv-list-item-p {
+.pros-list-item-p {
     font-size: 14px;
     line-height: 1.71;
     color: var(--grey-txt-clr);
@@ -393,8 +393,8 @@ img {
 }
 
 .team-list-info {
-    margin-top: 30px;
-    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .team-list-h {

@@ -299,17 +299,24 @@ img {
     align-items: center;
 }
 
+.pros-icon-container {
+    display: flex;
+    min-width: 270px;
+    min-height: 120px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-btn-clr);
+    
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
 .pros-icon {
     display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 270px;
-        height: 120px;
-        border-radius: 4px;
-        background-color: var(--bg-btn-clr);
-
-        padding: 25px 100px 25px 100px;
-        margin-bottom: 30px;
+    justify-content: center;
+    align-items:baseline;
+    width: 70px;
+    height: 70px;
 }
 
 .pros-list-item:not(:last-child) {
@@ -322,9 +329,7 @@ img {
     line-height: 1.14;
     text-transform: uppercase;
     color: var(--black-txt-clr);
-
     
-   
     width: 270px;
     margin-bottom: 10px;
 }
